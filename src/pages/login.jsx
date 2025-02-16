@@ -22,7 +22,7 @@ function login() {
     try {
       if (email) {
         const { data } = await axios.post(CHECK_USERS, {email});
-        console.log({ data })
+        
         if (data.status === 401) {
           setNewUser(true);
           setUserInfo({name, email, profileImage, status: ""});
